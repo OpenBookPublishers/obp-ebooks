@@ -1,4 +1,9 @@
 
+# N.B.: `$@` is the file to be generated
+#       `$<` is the inputs used to generate it
+#       `$^` is also the inputs used to generate it
+
+
 SOURCE := book.indd
 FORMATS := book.pdf book.epub book.mobi
 OUTPUT := output
@@ -21,3 +26,12 @@ $(OUTPUT)/book.mobi: ./book.epub
 
 clean:
 	rm -f -- $(TARGETS)
+
+# TODOs:
+
+# "EPub-rough" -> # manual, to be scripted
+#  EPub -> XML; # obp-gen-xml
+#  EPub -> Mobi # calibre-mobigen
+#  EPub -> HTMLreader # obp-gen-readers
+#  PDFi -> PDFreader # obp-gen-readers
+#  PDFi -> "Chapter PDFs" # chapter-splitter
