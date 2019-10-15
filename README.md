@@ -10,3 +10,11 @@ various ebook formats, e.g.,:
 * PDF reader
 * HTML reader
 
+Operation
+---------
+
+make clean
+install files
+make check
+make bundle
+

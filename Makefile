@@ -23,6 +23,7 @@ $(OUTPUT)/book.xml: $(OUTPUT)/book.epub
 $(OUTPUT)/book.mobi: ./book.epub
 	bin/epub2mobi $< > $@
 
+.PHONY: clean check bundle
 
 clean:
 	rm -f -- $(TARGETS)
