@@ -13,8 +13,10 @@ various ebook formats, e.g.,:
 Operation
 ---------
 
-make clean
+    make clean
+
 install files
-make check
-make bundle
+
+    make check
+    make bundle
 
