@@ -1,0 +1,3 @@
+[submodule "repos/obp-epub-fixup"]
+	path = repos/obp-epub-fixup
+	url = https://github.com/OpenBookPublishers/obp-epub-fixup.git
