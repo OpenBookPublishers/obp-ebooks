@@ -15,7 +15,10 @@ install:
 	echo TBD
 
 $(OUTPUT)/book.epub: ./book.epub
-	bin/fixup-epub $< > $@
+	cp book.epub repos/obp-epub-fixup/
+	bash repos/obp-epub-fixup/run book
+	cp repos/obp-epub-fixup/book_new.epub output
+#	bin/fixup-epub $< > $@
 
 $(OUTPUT)/book.xml: $(OUTPUT)/book.epub
 	bin/epub2xml $< -o $@
@@ -26,7 +29,8 @@ $(OUTPUT)/book.mobi: ./book.epub
 .PHONY: clean check bundle
 
 clean:
-	rm -f -- $(TARGETS)
+	bash repos/obp-epub-fixup/clean -y
+#	rm -f -- $(TARGETS)
 
 # TODOs:
 
